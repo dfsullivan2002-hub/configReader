@@ -22,9 +22,10 @@ int main () {
             std::string key = line.substr(0, idx);
             std::string value = line.substr(idx + 1);
             settings[key] = value;
-            std::cout << key << value << std::endl;
-
             }
+        }
+        for (const auto& pair : settings) {
+            std::cout << pair.first << " = " << pair.second << std::endl;
         }
         inFile.close();
     } 
